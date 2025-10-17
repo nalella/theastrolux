@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/png" href="theastrolux.com-logo.webp">
+  <link rel="shortcut icon" type="image/png" href="theastrolux.com-logo.webp">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="sidebar.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="content.css">
+  <link rel="stylesheet" href="sub-header.css">
+  <title>Home | theastrolux</title>
+  <style>
+    
+    /* SUB HEADER */
+    .sub-header {
+      position: sticky;
+    }
+
+    .sub-header .close-btn {
+      margin-left: auto;
+      margin-right: 15px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 20px;
+      color: #e6d8a8;
+    }
+
+    .sub-header .close-btn:hover {
+      color: #ffaaaa;
+    }
+
+    /* LAYOUT */
+    .content {
+      padding: 100px 0;
+      margin: 0 10px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 100px;
+    }
+    .content img {
+      width: 400px;
+      height: auto;
+      border-radius: 5px;
+    }
+    .quotes {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      gap: 30px; 
+      margin-top: 20px;
+      font-size: 24px;
+      width: 250px;
+    }
+    .quotes div {
+      max-width: 250px;
+    }
+
+
+    @media (max-width: 1275px) {
+      .content {
+        justify-content: space-evenly;
+        gap: 25px;
+        padding: 50px 0;
+        margin: 0;
+      }
+    }
+
+    @media (max-width: 1000px) {
+      .quotes {
+        order: +1; /* moves sidebar above content */
+      }
+      .content {
+        padding: 25px 0;
+      }
+    }
+
+    @media (max-width: 824px) {
+      .search-btn {
+        display: none;
+      }  
+    }
+    
+    @media (max-width: 750px) {
+      .content {
+        flex-direction: column;
+        gap: 40px; /* less gap for vertical layout */
+      }
+
+      .content img {
+        width: 90%;   /* make image responsive */
+        max-width: 400px;
+      }
+
+      .quotes {
+        width: 100%;
+        max-width: 500px;
+        font-size: 20px; /* scale down a bit for small screens */
+        margin: 0 auto;
+        text-align: center;
+      }
+  }
+
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header data-include="header.html" class="header"></header>
+
+  <!-- SUB HEADER -->
+  <div class="sub-header" id="subHeader">
+    <span class="message">Welcome to theastrolux!</span>
+    <span class="close-btn" onclick="dismissSubHeader()">×</span>
+  </div>
+
+  <!-- SEARCH BTN MOBILE -->
+  <div class="search-container-mobile">
+    <h3>Search</h3>
+    <input type="text" placeholder="Search...">
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <div class="container">
+    <div class="sidebar" data-include="sidebar.html"></div>
+    <div class="content">
+      <img src="Nale-Astro-Lux-theastrolux.com_-1.webp" alt="Astrology portrait">
+      <div class="quotes">
+        <div>
+          <em>“Millionaires don’t use Astrology, billionaires do.”</em>  
+          – J.P. Morgan
+        </div>
+        <div>
+          <em>“A physician without a knowledge of astrology has no right to call himself a physician.”</em>  
+          – Hippocrates
+        </div>
+        <div>
+          <em>“Astrology represents summation of all the psychological knowledge of antiquity.”</em>  
+          – Carl Jung
+        </div>
+      </div>
+    </div>
+  </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" data-include="footer.html"></footer>
+
+  <script src="includes.js"></script>
+  <script>
+    function dismissSubHeader() {
+      const subHeader = document.getElementById("subHeader");
+      if (subHeader) {
+        subHeader.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>

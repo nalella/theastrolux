@@ -1,0 +1,36 @@
+/* FOOTER */
+footer {
+      background: #51451a;
+      text-align: center;
+      padding: 20px 40px;
+      position: relative;
+      font-size: 0.9rem;
+    }
+
+    footer .top-row {
+    display: flex;
+    justify-content: center; /* icons go to the right */
+    gap: 15px;
+    margin-bottom: 10px;
+    }
+
+    footer .top-row span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #d7c590;
+    color: #d7c590;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    }
+
+    footer .top-row span:hover {
+    background: #d7c590;
+    color: #2b0d26;
+    }
+
+    footer p {
+    margin: 0;
+    }

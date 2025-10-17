@@ -1,0 +1,44 @@
+/*STYLES*/
+body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #2b0d26;
+      color: #e6d8a8;
+    }
+    
+.no-dots {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .no-dots li {
+      margin: 20px 0;
+    }
+
+
+    ul li {
+    margin-bottom: 8px; /* adds vertical space between links */
+    }
+
+    ul li:last-child {
+    margin-bottom: 0; /* removes extra space at the end */
+    }
+
+
+    ul li a {
+    color: #88bbff;      /* blue for links */
+    text-decoration: none;
+    }
+
+    ul li a:hover {
+    text-decoration: underline;
+    }
+
+    /* "Fake links" without href */
+    ul li a.nolink {
+    color: #ddd;        /* look like plain text */
+    text-decoration: none;
+    cursor: default;    /* no pointer hand */
+    pointer-events: none; /* makes it unclickable */
+    }

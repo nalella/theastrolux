@@ -1,0 +1,26 @@
+/* SUB HEADER */
+    .sub-header {
+      text-align: center;
+      background: #4d0121;
+      padding: 10px;
+      font-style: italic;
+
+      top: 90px; /* adjust based on header height */
+      z-index: 999;
+
+      display: flex;
+      align-items: center;
+
+      font-size: 24px;
+    }
+
+    .sub-header .message {
+      flex: 1;
+      text-align: center;
+    }
+
+    @media (max-width: 425px) {
+      .sub-header {
+        top: 70px;
+      }
+    }

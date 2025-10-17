@@ -1,0 +1,120 @@
+/* CONTENT */
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 0px;
+    }
+
+    .content {
+      background: #3b0606;
+      padding: 30px;
+      margin: 30px;
+      width: 80%;
+      max-width: 1500px;
+      text-align: left;
+      box-sizing: border-box;
+    }
+
+    .content p {
+      color: rgb(193, 193, 193);
+      font-size: 16px;
+      margin: 30px 0;
+      line-height: 1.6;
+    }
+
+    .content .highlighted-p {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .content .sub-title {
+      margin-top: 60px;
+      font-size: 20px;
+    }
+
+    .content ul p {
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    .content .copyright-p {
+      color: rgb(153, 153, 153);
+    }
+
+    .content .credit {
+      font-style: italic;
+      color: rgb(153, 153, 153);
+    }
+
+    .content a {
+      color: #88bbff;      /* blue for links */
+      text-decoration: none;
+    }
+
+    .content a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 1275px) {
+      .content {
+        margin: 0;
+        max-width: none;
+        padding: 30px 20px;
+        width: 100%;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    /* Shrink logo and text for very small screens */
+    @media (max-width: 425px) {
+      .content {
+        padding: 30px 15px;
+      }
+    }
+
+
+
+  /* POSTS */
+  .post-card {
+    display: flex;
+    gap: 20px;
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0;
+    align-items: flex-start;
+  }
+
+  .post-card img {
+    width: 180px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+    margin: auto;
+  }
+
+  /* ✅ When screen width <= 700px (phones & small tablets) */
+  @media (max-width: 700px) {
+    .post-card {
+      flex-direction: column; /* stack elements vertically */
+      text-align: center; /* optional: center content */
+    }
+
+    .post-card img {
+      width: 90%; /* make image full width on small screens */
+      max-height: 300px;
+      margin: auto;
+    }
+
+    .post-card h2 {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    .post-card p {
+      font-size: 0.95rem;
+    }
+  }

@@ -1,0 +1,122 @@
+/* HEADER */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgb(0, 0, 0);
+      padding: 10px 30px;
+
+      position: sticky;
+      top: 0;
+      z-index: 1000; /* make sure it’s above other elements */
+    }
+    header .logo {
+      display: flex;
+      align-items: center;
+    }
+    header .logo img {
+      width: 70px;
+      height: 70px;
+      margin-right: 15px;
+    }
+    header h1 {
+      font-size: 3rem;
+      font-weight: 500;
+      margin: 0;
+      color: #d7c590;
+    }
+    header .menu-btn {
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    /* NAVIGATION */
+  .nav-links {
+    display: none; /* hidden by default (mobile) */
+    flex-direction: column;
+    position: absolute;
+    top: 70px; /* just below header */
+    right: 0;
+    background: black;
+    width: 100%;
+    padding: 15px 0;
+    gap: 25px;
+    text-align: center;
+
+    margin-right: 5%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .nav-links.active {
+    display: flex; /* show when active */
+  }
+
+  .nav-links a {
+    color: #d7c590;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    color: #fff2c2;
+  }
+
+
+  /* SCREEN SIZE */
+  @media (max-width: 1100px) {
+      .nav-links {
+        margin-right: 0;
+      }
+    }
+
+/* Show nav links & hide hamburger on larger screens */
+    @media (min-width: 825px) {
+      .nav-links {
+        display: flex;
+        flex-direction: row;
+        top: 0;
+        position: static;
+        justify-content: space-between;
+        width: 30%;
+        min-width: 400px;
+        gap: 20px;
+      }
+      header .menu-btn {
+        display: none;
+      }
+    }
+
+    @media (max-width: 824px) {
+      header {
+        padding-right: 10px;
+        padding-left: 20px;
+      }  
+    }
+
+    @media (max-width: 750px) {
+      header {
+        padding-right: 10px;
+        padding-left: 10px;
+      }
+    }
+
+    /* Shrink logo and text for very small screens */
+    @media (max-width: 425px) {
+      header .logo img {
+        width: 50px;
+        height: auto;
+        margin-right: 10px;
+      }
+
+      header h1 {
+        font-size: 2rem;  /* smaller than 3rem */
+      }
+    }
