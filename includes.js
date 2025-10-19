@@ -51,8 +51,19 @@ document.addEventListener("DOMContentLoaded", () => {
       .catch(err => console.error(`❌ Error loading ${selector}:`, err));
   }
 
+  function loadScript(jsFile) {
+    setTimeout(() => {
+      const script = document.createElement("script");
+      script.src = jsFile;
+      script.onload = () => console.log(`✅ ${jsFile} loaded`);
+      script.onerror = () => console.error(`❌ Failed to load ${jsFile}`);
+      document.body.appendChild(script);
+    }, 500);
+  }
+
   // Example usage:
   loadComponent(".sidebar", "sidebar.html", "sidebar.js");
   loadComponent("header", "header.html", "header.js");
   loadComponent("footer", "footer.html", null); // footer might not need a script
+  loadScript("searchbar.js");
 });

@@ -32,30 +32,6 @@
       });
   }
 
-  // ====== SEARCH FUNCTIONALITY ======
-  const searchInput = document.querySelector(".search-container input");
-  const searchButton = document.querySelector(".search-container .search-btn");
-
-  if (searchInput && searchButton) {
-    // When user presses Enter in the input
-    searchInput.addEventListener("keypress", event => {
-      if (event.key === "Enter") {
-        event.preventDefault();
-        handleSearch();
-      }
-    });
-
-    // When user clicks the button
-    searchButton.addEventListener("click", handleSearch);
-  }
-
-  function handleSearch() {
-    const query = searchInput.value.trim();
-    if (!query) return;
-    // Redirect to category.html with a search parameter
-    window.location.href = `category.html?search=${encodeURIComponent(query)}`;
-  }
-
   // ====== HELPERS ======
   function getMonthIndex(monthName) {
     const months = [
@@ -74,6 +50,11 @@
     return new Date(year, month, day);
   }
 })();
+
+
+
+
+
 
 
 
