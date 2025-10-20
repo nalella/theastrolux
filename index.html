@@ -15,13 +15,11 @@
   <style>
     
     /* SUB HEADER */
-    .sub-header {
+    /* .sub-header {
       position: sticky;
     }
 
     .sub-header .close-btn {
-      margin-left: auto;
-      margin-right: 15px;
       cursor: pointer;
       font-weight: bold;
       font-size: 20px;
@@ -30,7 +28,7 @@
 
     .sub-header .close-btn:hover {
       color: #ffaaaa;
-    }
+    } */
 
     /* LAYOUT */
     .content {
@@ -116,14 +114,13 @@
   <!-- SUB HEADER -->
   <div class="sub-header" id="subHeader">
     <span class="message">Welcome to theastrolux!</span>
-    <span class="close-btn" onclick="dismissSubHeader()">×</span>
+    <!--<div style="text-align: right;">
+      <span class="close-btn" onclick="dismissSubHeader()">×</span>
+    </div>-->
   </div>
 
   <!-- SEARCH BTN MOBILE -->
-  <form id="search-container-mobile" class="search-container" role="search" action="/search" method="get">
-    <h3>Search</h3>
-    <input type="search" name="q" placeholder="Search..." enterkeyhint="search" maxlength="50">
-  </form>
+  <div data-include="searchbtnmobile.html" class="searchbtnmobileContainer"></div>
 
   <!-- MAIN CONTENT -->
   <main>
@@ -154,12 +151,12 @@
 
   <script src="includes.js"></script>
   <script>
-    function dismissSubHeader() {
-      const subHeader = document.getElementById("subHeader");
-      if (subHeader) {
-        subHeader.style.display = "none";
-      }
-    }
+    // function dismissSubHeader() {
+    //   const subHeader = document.getElementById("subHeader");
+    //   if (subHeader) {
+    //     subHeader.style.display = "none";
+    //   }
+    // }
   </script>
 
 </body>

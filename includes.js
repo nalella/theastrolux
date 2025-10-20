@@ -65,5 +65,6 @@ document.addEventListener("DOMContentLoaded", () => {
   loadComponent(".sidebar", "sidebar.html", "sidebar.js");
   loadComponent("header", "header.html", "header.js");
   loadComponent("footer", "footer.html", null); // footer might not need a script
+  loadComponent("searchbtnmobileContainer", "searchbtnmobile.html", null);
   loadScript("searchbar.js");
 });
