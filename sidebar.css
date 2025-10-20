@@ -22,12 +22,14 @@
   box-sizing: border-box;
 }
 #search-container-desktop button {
-  padding: 5px 10px;
+  font-size: 16px;
+  padding: 8px 10px;
   background: #111;
   color: #d7c590;
   border: none;
   margin-top: 5px;
   cursor: pointer;
+  box-sizing: border-box;
 } 
 #search-container-desktop h3 {
   margin: 0;
