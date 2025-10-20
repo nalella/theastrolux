@@ -14,10 +14,12 @@
 }
 #search-container-desktop input {
   width: 80%;
-  padding: 5px;
+  font-size: 16px;
+  padding: 8px 10px;
   border: none;
   background: #111;
   color: white;
+  box-sizing: border-box;
 }
 #search-container-desktop button {
   padding: 5px 10px;
@@ -62,8 +64,10 @@
 }
 
 #search-container-mobile input {
+  font-size: 16px;
+  max-width: 400px;
   width: 80%;
-  padding: 5px;
+  padding: 8px 10px;
   border: none;
   background: #111;
   color: white;
